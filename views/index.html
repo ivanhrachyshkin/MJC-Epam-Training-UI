@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet"
+    >
+    <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+    >
+    <link
+            href="css/shared.css"
+            rel="stylesheet"
+            type="text/css"
+    >
+    <link
+            href="css/login.css"
+            rel="stylesheet"
+            type="text/css"
+    >
+    <title>JSApp</title>
+</head>
+<body>
+<div id="root">
+    <header class="header">
+        <div class="header__group">
+            <span>logo</span>
+        </div>
+        <div class="header__group">
+            <input
+                    class="input"
+                    type="search"
+                    placeholder="Search by item name"
+                    aria-label="Search by item name"
+            />
+            <select
+                    class="input"
+                    name="category"
+                    id="category"
+                    aria-label="All categories"
+            >
+                <option value="0">All categories</option>
+                {items.content.map(value => (
+                <option value={value.id}>{value.name}</option>
+                ))}
+            </select>
+        </div>
+
+        <div class="header__group">
+            <button
+                    class="material-icons"
+                    type="button"
+            >shopping_cart
+            </button>
+            <a href="/public">Login</a>
+            <a href="#">Sign up</a>
+        </div>
+    </header>
+    <main class="page-login">
+
+        <div class="content">
+
+            <div class="container">
+
+                <form
+                        action="/main"
+                        method="post"
+                        class="login-form"
+                >
+                    <div class="login-form__logo">Logo</div>
+                    <input
+                            class="input"
+                            type="text"
+                            name="username"
+                            placeholder="username"
+                            aria-label="username"
+                    />
+                    <input
+                            class="input"
+                            type="password"
+                            name="password"
+                            placeholder="password"
+                            aria-label="password"
+                    />
+                    <button
+                            class="button"
+                            type="submit"
+                    >
+                        Login
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+</div>
+<script src="js/a.js"></script>
+</body>
+</html>
