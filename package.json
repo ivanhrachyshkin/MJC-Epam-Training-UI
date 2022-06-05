@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "sass -w public/scss/checkout.scss:public/css/checkout.css public/scss/add.scss:public/css/add.css public/scss/main.scss:public/css/main.css public/scss/index.scss:public/css/index.css public/scss/shared.scss:public/css/shared.css public/scss/login.scss:public/css/login.css -s compressed --no-source-map",
+    "serve": "sass -w public/scss/checkout.scss:public/css/checkout.css public/scss/add.scss:public/css/add.css public/scss/main.scss:public/css/main.css public/scss/shared.scss:public/css/shared.css public/scss/index.scss:public/css/index.css -s compressed --no-source-map",
     "preserve": "npm run build",
-    "build": "sass public/scss/checkout.scss:public/css/checkout.css public/scss/add.scss:public/css/add.css public/scss/main.scss:public/css/main.css public/scss/index.scss:public/css/index.css public/scss/shared.scss:public/css/shared.css public/scss/login.scss:public/css/login.css -s compressed --no-source-map"
+    "build": "sass public/scss/checkout.scss:public/css/checkout.css public/scss/add.scss:public/css/add.css public/scss/main.scss:public/css/main.css public/scss/shared.scss:public/css/shared.css public/scss/index.scss:public/css/index.css -s compressed --no-source-map"
 
   },
   "keywords": [],

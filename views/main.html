@@ -17,7 +17,7 @@
             type="text/css"
     >
     <link
-            href="/css/index.css"
+            href="/css/main.css"
             rel="stylesheet"
             type="text/css"
     >
@@ -50,53 +50,25 @@
             <button
                     class="material-icons"
                     type="button"
+                    onclick="location.href='/checkout'"
             >shopping_cart
             </button>
             <a href="/">Login</a>
             <a href="#">Sign up</a>
         </div>
     </header>
-    <main class="page-login">
+    <main class="page-main">
 
         <div class="content">
-
-            <div class="container">
-
-                <form
-                        id="login-form"
-                        class="login-form"
-                        method="post"
-                >
-                    <div class="login-form__logo">Logo</div>
-                    <input
-                            class="input"
-                            type="text"
-                            id="username"
-                            placeholder="username"
-                            aria-label="username"
-                    />
-                    <input
-                            class="input"
-                            type="password"
-                            id="password"
-                            placeholder="password"
-                            aria-label="password"
-                    />
-                    <button
-                            class="button"
-                            type="submit"
-                    >
-                        Login
-                    </button>
-                </form>
-
+            <label class="content__title" id="content__title">
+            </label>
+            <div class="container" id="container">
             </div>
-
         </div>
 
     </main>
 </div>
 <script src="js/categories.js"></script>
-<script src="js/login.js"></script>
+<script src="js/categories_img.js"></script>
 </body>
 </html>

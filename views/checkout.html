@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet"
+    >
+    <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+    >
+    <link
+            href="/css/shared.css"
+            rel="stylesheet"
+            type="text/css"
+    >
+    <link
+            href="/css/checkout.css"
+            rel="stylesheet"
+            type="text/css"
+    >
+    <title>JSApp</title>
+</head>
+<body>
+<div id="root">
+    <header class="header">
+        <div class="header__group">
+            <span>logo</span>
+        </div>
+        <div class="header__group">
+            <input
+                    class="input"
+                    type="search"
+                    placeholder="Search by item name"
+                    aria-label="Search by item name"
+            />
+            <select
+                    class="input"
+                    name="category"
+                    id="category"
+                    aria-label="All categories"
+            >
+                <option value="0" selected id="init_value">All categories</option>
+            </select>
+        </div>
+
+        <div class="header__group">
+            <button
+                    class="material-icons"
+                    type="button"
+                    onclick="location.href='/checkout'"
+            >shopping_cart
+            </button>
+            <a href="/">Login</a>
+            <a href="#">Sign up</a>
+        </div>
+    </header>
+    <main class="checkout-page">
+
+        <div class="checkout-content"
+        >
+            <label class="checkout-content__title">
+                <span>Checkout</span>
+            </label>
+
+            <div class="checkout-content-block">
+                <div class="inner-block-image">
+                    <img src="#"
+                         width="80"
+                         height="80"/>
+                </div>
+                <div class="inner-block-text">
+                    <div class="text-label">
+                        <span>Certificate name</span>
+                    </div>
+                    <div class="text-content">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut...</span>
+                    </div>
+                </div>
+                <div class="inner-block-price">
+                    <span>$200</span>
+                </div>
+            </div>
+
+            <div class="checkout-content-block">
+                <div class="inner-block-image">
+                    <img src="#"
+                         width="80"
+                         height="80"/>
+                </div>
+                <div class="inner-block-text">
+                    <div class="text-label">
+                        <span>Certificate name</span>
+                    </div>
+                    <div class="text-content">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut...</span>
+                    </div>
+                </div>
+                <div class="inner-block-price">
+                    <span>$200</span>
+                </div>
+            </div>
+
+            <div class="checkout-content-block">
+                <div class="inner-block-image">
+                    <img src="#"
+                         width="80"
+                         height="80"/>
+                </div>
+                <div class="inner-block-text">
+                    <div class="text-label">
+                        <span>Certificate name</span>
+                    </div>
+                    <div class="text-content">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut...</span>
+                    </div>
+                </div>
+                <div class="inner-block-price">
+                    <span>$200</span>
+                </div>
+            </div>
+
+            <div class="checkout-content-block">
+                <div class="inner-block-image">
+                    <img src="library.png"
+                         width="80"
+                         height="80"/>
+                </div>
+                <div class="inner-block-text">
+                    <div class="text-label">
+                        <span>Certificate name</span>
+                    </div>
+                    <div class="text-content">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut...</span>
+                    </div>
+                </div>
+                <div class="inner-block-price">
+                    <span>$200</span>
+                </div>
+            </div>
+
+            <div class="checkout-content-block total-price">
+                <div class="sum">
+                    <div class="sum__title">Total</div>
+                    <div class="sum__value">$600</div>
+                </div>
+            </div>
+
+            <div class="register-form-buttons">
+                <button
+                        class="button cancel-button"
+                        type="submit"
+                >
+                    Cancel
+                </button>
+                <button
+                        class="button checkout-button"
+                        type="submit"
+                >
+                    Checkout
+                </button>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="js/categories.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

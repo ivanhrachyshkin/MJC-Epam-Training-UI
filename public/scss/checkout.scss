@@ -87,7 +87,22 @@ img {
   background: #E0E0E0;
 }
 
-.register-form-buttons{
+.register-form-buttons {
   margin-top: 2rem;
   width: 100%;
+  padding-left: 17rem;
+
+  .button {
+    width: 30%;
+    height: 1.7rem;
+  }
+
+  .checkout-button {
+    background-color: #6FCF97;
+    color: #FFFFFF;
+  }
+
+  .cancel-button {
+    border: 1px solid lightgrey;
+  }
 }
