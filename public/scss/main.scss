@@ -21,12 +21,15 @@
       height: 7rem;
       display: flex;
       justify-content: center;
+      align-items: center;
 
       color: #fff;
 
       background-color: #BDBDBD;
-      #category_image {
-        margin-top: 0.65rem;
+
+      .category_image{
+        height: 90px;
+        width: 90px;
         margin-left: 0.5rem;
         margin-right: 0.5rem;
       }
@@ -50,7 +53,3 @@
     }
   }
 }
-
-
-
-
