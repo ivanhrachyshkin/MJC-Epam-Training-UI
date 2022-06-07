@@ -1,3 +1,5 @@
+import {properties} from "./properties.js";
+
 const form = document.getElementById('login-form')
 
 form.addEventListener('submit', function (e) {
@@ -6,7 +8,7 @@ form.addEventListener('submit', function (e) {
     const username = document.getElementById('username').value
     const password = document.getElementById('password').value
 
-    fetch('http://192.168.43.65:8080/auth/login', {
+    fetch(properties.loginUrl, {
         method: 'POST',
         body: JSON.stringify({
             username: username,
@@ -14,8 +16,8 @@ form.addEventListener('submit', function (e) {
 
         }),
         headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        }
+            'Content-type': 'application/json',
+        },
     })
         .then(response => {
             if (response.ok) {
@@ -24,11 +26,9 @@ form.addEventListener('submit', function (e) {
             return response.json();
         })
         .then(data => {
-           if(typeof data.message !== "undefined"){
-               alert(data.message)
-           }
-        })
-        .catch(error => {
-            console.error('Error:', error.value)
+            if (typeof data.message !== "undefined") {
+                alert(data.message)
+            }
+            document.cookie = "token = " + data.token;
         });
 });

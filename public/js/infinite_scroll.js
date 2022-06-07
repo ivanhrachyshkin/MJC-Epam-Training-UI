@@ -1,7 +1,9 @@
+import {properties} from "./properties.js";
+
 let page = 0;
 
 async function loadMore() {
-    const response = await fetch('http://192.168.43.65:8080/gifts?size=15&page=' + page + '&sort=id,ASC&')
+    const response = await fetch(properties.giftsUrl + page);
     const data = await response.json();
     length = data.content.length;
 
@@ -9,7 +11,7 @@ async function loadMore() {
     for (let i = 0; i < length; i++) {
         console.log(data.content[i].image)
         temp2 += `<div class="card"> 
-            <img src="http://127.0.0.1:8887/${data.content[i].image}"  width="180" height="220" alt="${data.content[i].id}"/>
+            <img src="${properties.imagesServerUrl}/${data.content[i].image}"  width="180" height="220" alt="${data.content[i].id}"/>
         </div>`
     }
 
@@ -19,11 +21,11 @@ async function loadMore() {
 }
 
 // Detect when scrolled to bottom.
-window.addEventListener('scroll',()=>{
+window.addEventListener('scroll', () => {
     console.log(window.scrollY) //scrolled from top
     console.log(window.innerHeight) //visible part of screen
-    if(window.scrollY + window.innerHeight >=
-        document.documentElement.scrollHeight){
+    if (window.scrollY + window.innerHeight >=
+        document.documentElement.scrollHeight) {
         loadMore();
     }
 })

@@ -1,7 +1,9 @@
+import {properties} from "./properties.js";
+
 getData();
 
 async function getData() {
-    const response = await fetch('http://192.168.43.65:8080/categories')
+    const response = await fetch(properties.categoriesUrl)
     const data = await response.json();
     length = data.content.length;
 
